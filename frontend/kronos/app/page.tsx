@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Header from "./layout/header";
-import ButtonPrimary from "./shared/button";
+import ButtonPrimary, { buttonType } from "./shared/button";
 
 export default function Home() {
   return (
@@ -74,9 +74,8 @@ export default function Home() {
         <Header></Header>
 
         <div className="flex gap-5">
-
-          {/* <ButtonPrimary></ButtonPrimary> */}
-          <ButtonPrimary title={"Teste"}/>
+          <ButtonPrimary title={"Parar"} type={buttonType.SECUNDARY}/>
+          <ButtonPrimary title={"Iniciar"} type={buttonType.PRIMARY}/>
         </div>
       </main>
     </div>
