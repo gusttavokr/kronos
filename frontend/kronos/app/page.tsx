@@ -74,7 +74,7 @@ export default function Home() {
         <Header></Header>
 
         <div className="flex gap-5">
-          <ButtonPrimary title={"Parar"} type={buttonType.SECUNDARY}/>
+          <ButtonPrimary title={"Parar"} type={buttonType.TERTIARY}/>
           <ButtonPrimary title={"Iniciar"} type={buttonType.PRIMARY}/>
         </div>
       </main>

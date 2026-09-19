@@ -1,6 +1,7 @@
 export enum buttonType{
     PRIMARY,
-    SECUNDARY
+    SECUNDARY,
+    TERTIARY
 }
 interface buttonProps{
     title: string,
@@ -8,11 +9,15 @@ interface buttonProps{
 }   
 
 export function typeButton(props:buttonProps): string{
-    if (props.type == buttonType.PRIMARY){
-        return "bg-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer"
-    } 
 
-    return "border border-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer"
+    switch(props.type){
+        case buttonType.PRIMARY:
+            return "bg-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer"
+        case buttonType.SECUNDARY:
+            return "border border-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer"
+            case buttonType.TERTIARY:
+            return "border border-gray-600 text-gray-600 rounded-3xl px-5 h-12 w-64 cursor-pointer"
+    }
 }
 
 export default function ButtonPrimary( props:buttonProps ) {
