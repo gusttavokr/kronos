@@ -1,5 +1,7 @@
 import Image from "next/image";
+
 import Header from "./layout/header";
+import ButtonPrimary from "./shared/button";
 
 export default function Home() {
   return (
@@ -68,8 +70,14 @@ export default function Home() {
     // </div>
 
     <div>
-      <main className="">
+      <main className="flex flex-col text-center justify-between min-h-screen p-20 items-center">
         <Header></Header>
+
+        <div className="flex gap-5">
+
+          {/* <ButtonPrimary></ButtonPrimary> */}
+          <ButtonPrimary title={"Teste"}/>
+        </div>
       </main>
     </div>
   );
