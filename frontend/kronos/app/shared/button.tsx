@@ -3,10 +3,12 @@ export enum buttonType{
     SECUNDARY,
     TERTIARY
 }
+
 interface buttonProps{
-    title: string,
-    type: buttonType,
-}   
+    title: string
+    function?: any
+    type: buttonType
+}
 
 export function typeButton(props:buttonProps): string{
 
@@ -20,13 +22,13 @@ export function typeButton(props:buttonProps): string{
     }
 }
 
-export default function ButtonPrimary( props:buttonProps ) {
-    
-    const result = typeButton(props);
+export default function ButtonPrimary(props: buttonProps) {
+
+    const result = typeButton(props)
 
     return (
-        <button className={result}>
-            <a>{props.title}</a>
+        <button className={result} onClick={props.function}>
+            {props.title}
         </button>
     )
 }

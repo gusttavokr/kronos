@@ -1,9 +1,19 @@
+"use client"
+
 import Image from "next/image";
 
 import Header from "./layout/header";
 import ButtonPrimary, { buttonType } from "./shared/button";
 
+import Cronometro from "./layout/cronometro";
+// import React from "react";
+
 export default function Home() {
+
+  function handleClick() {
+    alert("Funcione")
+  }
+
   return (
     // <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
     //   <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -73,9 +83,12 @@ export default function Home() {
       <main className="flex flex-col text-center justify-between min-h-screen p-20 items-center">
         <Header></Header>
 
+        <Cronometro></Cronometro>
+
         <div className="flex gap-5">
-          <ButtonPrimary title={"Parar"} type={buttonType.TERTIARY}/>
-          <ButtonPrimary title={"Iniciar"} type={buttonType.PRIMARY}/>
+          {/* <ButtonPrimary title={"Parar"} type={buttonType.TERTIARY} /> */}
+          <ButtonPrimary title="Parar" type={buttonType.TERTIARY}/>
+          <ButtonPrimary function={handleClick} title="Iniciar" type={buttonType.PRIMARY}/>
         </div>
       </main>
     </div>
