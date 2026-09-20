@@ -1,28 +1,23 @@
 "use client"
 
-import Image from "next/image";
+import Header from "./components/layout/header";
+import ButtonPrimary, { buttonType } from "./components/shared/button";
 
-import Header from "./layout/header";
-import ButtonPrimary, { buttonType } from "./shared/button";
-
-import Cronometro, { cronometroStatus } from "./layout/cronometro";
+import Cronometro, { cronometroStatus } from "./components/layout/cronometro";
 import React, { useState } from "react";
 // import React from "react";
 
 export default function Home() {
 
-  const [hours, setH] = React.useState(0);
-  const [minutes, setM] = React.useState(0);
-  const [seconds, setS] = React.useState(0);
-  const [milliseconds, setMs] = React.useState(0);
-
+  const [segundo, setSegundo] = useState(0)
   const [CS, setType] = React.useState(cronometroStatus.PARADO);
 
-  
-
   function iniciar() {
-    // alert("Iniciando...")
-    setMs(milliseconds + 1);
+
+    setInterval(function () {
+      setSegundo(segundo => segundo + 1)
+    }, 1000) 
+
   }
 
   return (
@@ -94,13 +89,13 @@ export default function Home() {
       <main className="flex flex-col text-center justify-between min-h-screen p-20 items-center">
         <Header></Header>
 
-        <Cronometro ms={milliseconds} type={CS}></Cronometro>
+        <Cronometro ms={segundo} type={CS}></Cronometro>
 
         <div className="flex gap-5">
           {/* <ButtonPrimary title={"Parar"} type={buttonType.TERTIARY} /> */}
-          <ButtonPrimary  title="Reiniciar" type={buttonType.TERTIARY}/>
-          <ButtonPrimary  title="Parar" type={buttonType.TERTIARY}/>
-          <ButtonPrimary function={iniciar} title="Iniciar" type={buttonType.PRIMARY}/>
+          <ButtonPrimary title="Reiniciar" type={buttonType.TERTIARY} />
+          <ButtonPrimary title="Parar" type={buttonType.TERTIARY} />
+          <ButtonPrimary function={iniciar} title="Iniciar" type={buttonType.PRIMARY} />
         </div>
       </main>
     </div>
