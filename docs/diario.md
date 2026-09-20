@@ -12,3 +12,11 @@ Além disso, aprendi como funciona a componentização no React/Next e o uso dos
 Tô tendo uma dificuldade danada de compreender a documentação, mas no pior dos casos eu procuro as aulas no YouTube.
 
 Aprendi a passar funções, o tal do useState do React. Porém não consegui fazer o que eu queria: A DROGA DO CONTADOR
+
+## Dia 03 (20/09/2026):
+
+Eu tiltei. Decidi regredir um nível tendo em vista que o teste vai ser puramente com React, além de que códigos funcionais vistos no youtube não funcionavam :D
+
+CONSEGUI FAZER CONTAGEM, MEU DEUS COMO EU ODEIO JAVASCRIPTTTTTTTTTTTTTTTTTTTTTTT, ERA SÓ UMA SETA =========>>>>>>>>>>>
+
+CONSEGUI, TÁ FUNCIONANDO, MEU DEEEEEEEEEEEEEEEEEEEEEUS DOIS DIAS PRA FAZER ISSO FUNCIONAR QUE ÓDIO.
