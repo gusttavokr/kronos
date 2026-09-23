@@ -5,8 +5,11 @@ export enum cronometroStatus{
 }
 
 interface cronometroProps{
-    ms: number,
-    type: cronometroStatus
+    milisegundo?: number,
+    segundo: number,
+    minuto?: number,
+    hora?: number,
+    type?: cronometroStatus
 }
 
 export default function Cronometro(props: cronometroProps) {
@@ -33,7 +36,7 @@ export default function Cronometro(props: cronometroProps) {
                     0
                 </div>
                 <div className="text-[#171717] text-9xl content-center w-32 h-64 bg-gray-300 rounded-3xl">
-                    {props.ms}
+                    {props.segundo}
                 </div>
             </div>
             <div className="flex gap-4">

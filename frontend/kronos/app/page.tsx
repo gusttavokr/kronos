@@ -4,27 +4,36 @@ import Header from "./components/layout/header";
 import ButtonPrimary, { buttonType } from "./components/shared/button";
 
 import Cronometro, { cronometroStatus } from "./components/layout/cronometro";
-import React, { useRef, useState } from "react";
-// import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Home() {
 
-  const [segundo, setSegundo] = useState(0)
-  const [CS, setType] = useState(cronometroStatus.PARADO);
-
+  const [segundo, setSegundo] = useState(0);
+  const [rodando, setRodando] = useState(false);
   const timer = React.useRef<null | NodeJS.Timeout>(null);
-  function iniciar() {
 
-    timer.current = setInterval(function () {
-      setSegundo(segundo => segundo + 1)
-    }, 1000) 
+  useEffect(() => {
+
+    if(!rodando) return
+
+    const intervalId = setInterval(() => {
+      setSegundo((prev) => prev + 1);
+    }, 1000);
+    
+
+    return () => clearInterval(intervalId);
+  }, [rodando]);
+
+  function iniciar(){
+    setRodando(true)
+  }
+  
+  function parar() {
+    // clearInterval(timer.current as NodeJS.Timeout);
+    setRodando(false)
   }
 
-  function parar(){
-    clearInterval(timer.current as NodeJS.Timeout);
-  }
-
-  function reiniciar(){
+  function reiniciar() {
     setSegundo(segundo => 0)
   }
 
@@ -97,10 +106,9 @@ export default function Home() {
       <main className="flex flex-col text-center justify-between min-h-screen p-20 items-center">
         <Header></Header>
 
-        <Cronometro ms={segundo} type={CS}></Cronometro>
+        <Cronometro segundo={segundo}></Cronometro>
 
         <div className="flex gap-5">
-          {/* <ButtonPrimary title={"Parar"} type={buttonType.TERTIARY} /> */}
           <ButtonPrimary function={reiniciar} title="Reiniciar" type={buttonType.TERTIARY} />
           <ButtonPrimary function={parar} title="Parar" type={buttonType.TERTIARY} />
           <ButtonPrimary function={iniciar} title="Iniciar" type={buttonType.PRIMARY} />
