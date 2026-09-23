@@ -34,3 +34,11 @@ O código que eu havia feito funcionava. Porém, quando fui aplicar a lógica pa
 - Já no useEffect funciona. Por que? Não sei. Porém é possível. E foi a solução do meu problema.
 
 Agora eu tenho um state pro status do cronometro, que pode ser melhor trabalhado. E funções pros controles.
+
+Como próximo objetivo, quero melhorar a abordagem com relação a formatação das horas.
+- Opção 1: Tratar segundo, minuto e hora individualmente. 
+    - Vantagens: Mais simples, foco na ferramenta
+    - Desvantagens: Código feiokkkkkk
+- Opção 2: Invés de unidade, trabalhar com TEMPO
+    - Vantagens: Lógica e código bem-feito
+    - Desvantagens: Não faço ideia de como fazer isso
