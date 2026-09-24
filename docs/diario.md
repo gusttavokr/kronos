@@ -42,3 +42,11 @@ Como próximo objetivo, quero melhorar a abordagem com relação a formatação 
 - Opção 2: Invés de unidade, trabalhar com TEMPO
     - Vantagens: Lógica e código bem-feito
     - Desvantagens: Não faço ideia de como fazer isso
+
+## Dia 06 (23/09/2026)
+
+Hoje o dia foi mais tranquilo. Até cheguei a pesquisar no Youtube se havia outra forma de formatar o valor de `0` pra `00`, mas não achei, então fui lá e eu mesmo fiz. Deve possuir formas melhores, mas a minha funcionou.
+
+Além disso consegui implementar a lógica que eu queria para o cronômetro. O foco desse projeto era ser simples, então sem estresse. Estou feliz com o resultado de hoje. (Acho que só tem que ajeitar esse tempo dos milisegundos q tá meio estranho mas tranquilidade)
+
+Objetivo de amanhã: **responsividade.**
