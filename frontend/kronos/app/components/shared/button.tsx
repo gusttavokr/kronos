@@ -14,7 +14,7 @@ export function typeButton(props:buttonProps): string{
 
     switch(props.type){
         case buttonType.PRIMARY:
-            return "bg-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer"
+            return "bg-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer text-zinc-50"
         case buttonType.SECUNDARY:
             return "border border-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer"
             case buttonType.TERTIARY:
