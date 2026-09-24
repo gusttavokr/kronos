@@ -1,52 +1,39 @@
-export enum cronometroStatus{
-    TRABALHANDO,
-    PARADO,
-    ZERADO
+interface cronometroProps {
+    milisegundo: number,
+    segundo: number,
+    minuto: number,
+    hora: number,
 }
 
-interface cronometroProps{
-    milisegundo?: number,
-    segundo: number,
-    minuto?: number,
-    hora?: number,
-    type?: cronometroStatus
+function format(value: number){
+
+    if (value < 10){
+        return <div className="text-zinc-50 text-9xl content-center rounded-3xl"> 0{value} </div>
+    }
+    
+    return <div className="text-zinc-50 text-9xl content-center rounded-3xl"> {value} </div>
 }
 
 export default function Cronometro(props: cronometroProps) {
+
+    
+
     return (
-        <div className="flex gap-4">
-            <div className="flex gap-4">
-                <div className="text-[#171717] text-9xl content-center w-32 h-64 bg-gray-300 rounded-3xl">
-                    0
-                </div>
-                <div className="text-[#171717] text-9xl content-center w-32 h-64 bg-gray-300 rounded-3xl">
-                    0
-                </div>
+        <div className="flex">
+
+            <div>{format(props.hora)}</div>
+            <div className="text-zinc-50 text-9xl content-center rounded-3xl">
+                :
             </div>
-            <div className="flex gap-4">
-                <div className="text-[#171717] text-9xl content-center w-32 h-64 bg-gray-300 rounded-3xl">
-                    0
-                </div>
-                <div className="text-[#171717] text-9xl content-center w-32 h-64 bg-gray-300 rounded-3xl">
-                    0
-                </div>
+            <div>{format(props.minuto)}</div>
+            <div className="text-zinc-50 text-9xl content-center rounded-3xl">
+                :
             </div>
-            <div className="flex gap-4">
-                <div className="text-[#171717] text-9xl content-center w-32 h-64 bg-gray-300 rounded-3xl">
-                    0
-                </div>
-                <div className="text-[#171717] text-9xl content-center w-32 h-64 bg-gray-300 rounded-3xl">
-                    {props.segundo}
-                </div>
+            <div>{format(props.segundo)}</div>
+            <div className="text-zinc-50 text-9xl content-center rounded-3xl">
+                :
             </div>
-            <div className="flex gap-4">
-                <div className="text-[#171717] text-9xl content-center w-32 h-48 bg-gray-300 rounded-3xl">
-                    0
-                </div>
-                <div className="text-[#171717] text-9xl content-center w-32 h-48 bg-gray-300 rounded-3xl">
-                    0
-                </div>
-            </div>
+            <div>{format(props.milisegundo)}</div>
         </div>
     )
 }
