@@ -136,7 +136,7 @@ export default function Home() {
 
         <Cronometro segundo={segundo} minuto={minuto} milisegundo={milisegundo} hora={hora}></Cronometro>
 
-        <div className="flex gap-5">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-5 ">
           <ButtonPrimary function={reiniciar} title="Reiniciar" type={buttonType.TERTIARY} />
           <ButtonPrimary function={parar} title="Parar" type={buttonType.TERTIARY} />
           <ButtonPrimary function={iniciar} title="Iniciar" type={buttonType.PRIMARY} />
