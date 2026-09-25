@@ -53,6 +53,8 @@ Objetivo de amanhã: **responsividade.**
 
 ## Dia 07 (24/09/2026)
 
+### Parte 1: Responsividade
+
 Como todo desafio que leva dias, o temido dia aconteceu. O dia do desânimo, cansaço, sei lá. Mas eu tenho um objetivo e vou fazer o que precisa ser feito.
 
 Responsividade feita. O que achei mais interessante foi a forma de trabalhar com os textos:
@@ -61,6 +63,12 @@ Responsividade feita. O que achei mais interessante foi a forma de trabalhar com
 3. Texto lg - Tela de destkop
 
 Além disso, uso de wrap para o elemento se adaptar ao width, por exemplo: `text-wrap`, `flex-wrap`.
+
+### Parte 2: Roteamento + Rotas Privadas e Públicas
+
+Eu ja tava indo me deitar, porém fiquei encucado por ter ouvido, lido, que as rotas no next são pelos arquivos, mas ao testar não funcionou.
+
+Graças a Deus a Rocketseat existe, e me explicou. As rotas são organizadas por pasta, e a rota precisa de um arquivo `page.tsx`. Por exemplo: `localhost:3000/produtos`, você cria uma pasta dentro de app como `app/(public)` para conter as rotas públicas, depois cria outra pasta `app/(public)/produtos`. Assim você consegue ter uma nova rota.
 
 ## Considerações finais
 
