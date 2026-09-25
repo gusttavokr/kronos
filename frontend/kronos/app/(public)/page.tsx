@@ -1,9 +1,9 @@
 "use client"
 
-import Header from "./components/layout/header";
-import ButtonPrimary, { buttonType } from "./components/shared/button";
+import Header from "../components/layout/header";
+import ButtonPrimary, { buttonType } from "../components/shared/button";
 
-import Cronometro from "./components/layout/cronometro";
+import Cronometro from "../components/layout/cronometro";
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
   // const timer = React.useRef<null | NodeJS.Timeout>(null);
 
   useEffect(() => {
-    
+
     if (!rodando) return
 
     const intervalId = setInterval(() => {
@@ -27,22 +27,22 @@ export default function Home() {
         setSegundo((prev) => prev + 1)
         setMilisegundo(milisegundo => 0)
       }
-      
+
       // Update Minuto
       if (segundo == 59) {
         setMinuto((prev) => prev + 1)
         setSegundo(segundo => 0)
         setMilisegundo(milisegundo => 0)
       }
-      
+
       // Update Hora
-      if (minuto == 59){
+      if (minuto == 59) {
         setHora((prev) => prev + 1)
         setMinuto(minuto => 0)
         setSegundo(segundo => 0)
         setMilisegundo(milisegundo => 0)
       }
-      
+
 
     }, 10);
 
@@ -145,3 +145,4 @@ export default function Home() {
     </div>
   );
 }
+
