@@ -1,4 +1,4 @@
-# Diário do ZERO ao JUNIOR: NEXT JS
+# Diário - Construindo um Cronômetro em 7 dias.
 
 O intuito desse material é catalogar o meu processo de aprendizagem de React utilizando o framework Next JS. **OBS: Sem usar Inteligência Artificial.** A proposta do desafio é provar que ainda é possível aprender sem dependência de IA, embora com dificuldades RS.
 
@@ -50,3 +50,26 @@ Hoje o dia foi mais tranquilo. Até cheguei a pesquisar no Youtube se havia outr
 Além disso consegui implementar a lógica que eu queria para o cronômetro. O foco desse projeto era ser simples, então sem estresse. Estou feliz com o resultado de hoje. (Acho que só tem que ajeitar esse tempo dos milisegundos q tá meio estranho mas tranquilidade)
 
 Objetivo de amanhã: **responsividade.**
+
+## Dia 07 (24/09/2026)
+
+Como todo desafio que leva dias, o temido dia aconteceu. O dia do desânimo, cansaço, sei lá. Mas eu tenho um objetivo e vou fazer o que precisa ser feito.
+
+Responsividade feita. O que achei mais interessante foi a forma de trabalhar com os textos:
+1. Texto base - Pensar sempre na menor tela possível
+2. Texto md - Como se comporta numa tela media
+3. Texto lg - Tela de destkop
+
+Além disso, uso de wrap para o elemento se adaptar ao width, por exemplo: `text-wrap`, `flex-wrap`.
+
+## Considerações finais
+
+Com isso finalizo esse projeto de cronômetro simples em uma semana. Me estressei bastante no começo, mas acho que foi devido o meu pouco contato com JavaScript e costume com o Angular. 
+
+Além disso, desenvolver sem utilizar Inteligência Artificial me estimulou bastante. Procurei aulas no YouTube, li e re-li a documentação do React e Next várias vezes, acessei o StackOverFlow (quem diria), **foi um processo divertido**. Percebi também que procurar a solução com a IA, embora seja mais fácil e rápido, não é uma boa forma de estudo. Entretanto, se usar de forma certa priorizando eficência invés de respostas rápidas, te potencializa.
+
+Com relação a esse projeto, pretendo aprender outros frameworks de Back-end, como Laravel, FastAPI. E como ainda falta aprender conexão com back-end, talvez seja uma boa forma implementar isso aqui.
+
+Meus próximos passos agora pra melhorar meu domínio no React é:
+1. Trabalhar com GRID 
+2. Desenvolver mais projetos 
