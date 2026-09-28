@@ -1,23 +1,31 @@
-export enum buttonType{
+export enum buttonType {
     PRIMARY,
     SECUNDARY,
     TERTIARY
 }
 
-interface buttonProps{
+interface buttonProps {
     title: string
     function?: any
     type: buttonType
 }
 
-export function typeButton(props:buttonProps): string{
+/**
+ * @deprecated Use outra função no lugar.
+ */
+function oldFunction() {
+    console.log('old')
+}
 
-    switch(props.type){
+export function typeButton(props: buttonProps): string {
+
+    switch (props.type) {
         case buttonType.PRIMARY:
+            oldFunction()
             return "bg-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer text-zinc-50"
         case buttonType.SECUNDARY:
             return "border border-red-400 rounded-3xl px-5 h-12 w-64 cursor-pointer"
-            case buttonType.TERTIARY:
+        case buttonType.TERTIARY:
             return "border border-gray-600 text-gray-600 rounded-3xl px-5 h-12 w-64 cursor-pointer"
     }
 }
