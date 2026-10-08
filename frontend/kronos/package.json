@@ -13,6 +13,9 @@
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
+  "overrides": {
+    "braces": "^3.0.3"
+  },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^26",
