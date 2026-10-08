@@ -1,0 +1,13 @@
+{
+    "name": "Node.js Dev Container",
+    "image": "://microsoft.com"
+    // Configurações opcionais: extensões do VS Code que abrem automaticamente
+    //   "customizations": {
+    //     "vscode": {
+    //       "extensions": [
+    //         "dbaeumer.vscode-eslint"
+    //       ]
+    //     }
+}
+// Roda comandos após a criação do container (ex: instalar dependências)
+//   "postCreateCommand": "npm install"
