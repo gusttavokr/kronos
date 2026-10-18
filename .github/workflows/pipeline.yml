@@ -23,3 +23,6 @@ jobs:
       
       - name: Deprecated code
         run: npm run lint
+      
+      - name: Verificar padrão de codificação - Prettier
+        run: npm run format:check
