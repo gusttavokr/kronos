@@ -1,13 +1,12 @@
-"use client"
+'use client';
 
-import Header from "../components/layout/header";
-import ButtonPrimary, { buttonType } from "../components/shared/button";
+import Header from '../components/layout/header';
+import ButtonPrimary, { buttonType } from '../components/shared/button';
 
-import Cronometro from "../components/layout/cronometro";
-import React, { useEffect, useState } from "react";
+import Cronometro from '../components/layout/cronometro';
+import React, { useEffect, useState } from 'react';
 
 export default function Home() {
-
   const [milisegundo, setMilisegundo] = useState(0);
   const [segundo, setSegundo] = useState(0);
   const [minuto, setMinuto] = useState(0);
@@ -17,52 +16,49 @@ export default function Home() {
   // const timer = React.useRef<null | NodeJS.Timeout>(null);
 
   useEffect(() => {
-
-    if (!rodando) return
+    if (!rodando) return;
 
     const intervalId = setInterval(() => {
       setMilisegundo((prev) => prev + 1);
 
       if (milisegundo == 99) {
-        setSegundo((prev) => prev + 1)
-        setMilisegundo(milisegundo => 0)
+        setSegundo((prev) => prev + 1);
+        setMilisegundo((milisegundo) => 0);
       }
 
       // Update Minuto
       if (segundo == 59) {
-        setMinuto((prev) => prev + 1)
-        setSegundo(segundo => 0)
-        setMilisegundo(milisegundo => 0)
+        setMinuto((prev) => prev + 1);
+        setSegundo((segundo) => 0);
+        setMilisegundo((milisegundo) => 0);
       }
 
       // Update Hora
       if (minuto == 59) {
-        setHora((prev) => prev + 1)
-        setMinuto(minuto => 0)
-        setSegundo(segundo => 0)
-        setMilisegundo(milisegundo => 0)
+        setHora((prev) => prev + 1);
+        setMinuto((minuto) => 0);
+        setSegundo((segundo) => 0);
+        setMilisegundo((milisegundo) => 0);
       }
-
-
     }, 10);
 
     return () => clearInterval(intervalId);
   }, [rodando, milisegundo, segundo, minuto, hora]);
 
   function iniciar() {
-    setRodando(true)
+    setRodando(true);
   }
 
   function parar() {
     // clearInterval(timer.current as NodeJS.Timeout);
-    setRodando(false)
+    setRodando(false);
   }
 
   function reiniciar() {
-    setMilisegundo(milisegundo => 0)
-    setSegundo(segundo => 0)
-    setMinuto(minuto => 0)
-    setHora(hora => 0)
+    setMilisegundo((milisegundo) => 0);
+    setSegundo((segundo) => 0);
+    setMinuto((minuto) => 0);
+    setHora((hora) => 0);
   }
 
   return (
@@ -134,7 +130,12 @@ export default function Home() {
       <main className="flex flex-col text-center justify-between min-h-screen p-20 items-center">
         <Header></Header>
 
-        <Cronometro segundo={segundo} minuto={minuto} milisegundo={milisegundo} hora={hora}></Cronometro>
+        <Cronometro
+          segundo={segundo}
+          minuto={minuto}
+          milisegundo={milisegundo}
+          hora={hora}
+        ></Cronometro>
 
         <div className="flex flex-row flex-wrap items-center justify-center gap-5 ">
           <ButtonPrimary function={reiniciar} title="Reiniciar" type={buttonType.TERTIARY} />
@@ -145,4 +146,3 @@ export default function Home() {
     </div>
   );
 }
-
