@@ -27,3 +27,6 @@ jobs:
       - name: Deprecated code
         run: npm run lint
       
+      - name: Código duplicado
+        run: npm run ci:dupes
+      
