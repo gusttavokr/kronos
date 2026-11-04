@@ -13,7 +13,7 @@
     "ci:dupes": "fallow dupes --threshold 5"
   },
   "dependencies": {
-    "fallow": "^3.36.0",
+    "fallow": "^3.38.1",
     "next": "^16.4.2",
     "prettier": "^3.9.10",
     "react": "19.3.1",
