@@ -18,20 +18,20 @@ export default function Home() {
     const intervalId = setInterval(() => {
       setMilisegundo((prev) => prev + 1);
 
-      if (milisegundo == 99) {
+      if (milisegundo === 99) {
         setSegundo((prev) => prev + 1);
         setMilisegundo(0);
       }
 
       // Update Minuto
-      if (segundo == 59) {
+      if (segundo === 59) {
         setMinuto((prev) => prev + 1);
         setSegundo(0);
         setMilisegundo(0);
       }
 
       // Update Hora
-      if (minuto == 59) {
+      if (minuto === 59) {
         setHora((prev) => prev + 1);
         setMinuto(0);
         setSegundo(0);
@@ -40,7 +40,7 @@ export default function Home() {
     }, 10);
 
     return () => clearInterval(intervalId);
-  }, [rodando, milisegundo, segundo, minuto, hora]);
+  }, [rodando, milisegundo, segundo, minuto]);
 
   const iniciar = useCallback(() => {
     setRodando(true);
