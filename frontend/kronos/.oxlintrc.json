@@ -1,14 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "nextjs", 
-    "typescript",
-    "react",
-    "react-perf",
-    "import",
-    "unicorn",
-    "oxc"
-  ],
+  "plugins": ["nextjs", "typescript", "react", "react-perf", "import", "unicorn", "oxc"],
   "categories": {
     "correctness": "off",
     "suspicious": "warn",
