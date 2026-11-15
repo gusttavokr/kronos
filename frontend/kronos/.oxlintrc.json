@@ -12,7 +12,6 @@
   },
   "ignorePatterns": [".next/**", "out/**", "build/**", "next-env.d.ts"],
   "rules": {
-
     "import/no-unassigned-import": "off",
 
     "complexity": ["warn", { "max": 12 }],
