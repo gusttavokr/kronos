@@ -1,12 +1,12 @@
 export enum buttonType {
-  PRIMARY,
-  SECUNDARY,
-  TERTIARY,
+  PRIMARY = 'PRIMARY',
+  SECUNDARY = 'SECUNDARY',
+  TERTIARY = 'TERTIARY',
 }
 
 interface buttonProps {
   title: string;
-  function?: any;
+  function?: () => void;
   type: buttonType;
 }
 

@@ -1,14 +1,27 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["nextjs", "typescript"],
+  "plugins": ["nextjs", "typescript", "react", "react-perf", "import", "unicorn", "oxc"],
   "categories": {
-    "correctness": "off"
+    "correctness": "off",
+    "suspicious": "warn",
+    "pedantic": "warn",
+    "perf": "warn"
   },
   "env": {
     "builtin": true
   },
   "ignorePatterns": [".next/**", "out/**", "build/**", "next-env.d.ts"],
   "rules": {
+    "import/no-unassigned-import": "off",
+
+    "complexity": ["warn", { "max": 12 }],
+    "max-lines-per-function": ["warn", { "max": 80, "skipBlankLines": true, "skipComments": true }],
+    "max-params": ["warn", 4],
+    "max-depth": ["warn", 3],
+    "import/no-cycle": "error",
+    "typescript/no-explicit-any": "warn",
+    "unicorn/no-nested-ternary": "warn",
+
     "no-array-constructor": "error",
     "no-unused-expressions": "warn",
     "no-unused-vars": "warn",

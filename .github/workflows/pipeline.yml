@@ -24,7 +24,7 @@ jobs:
       - name: Verificar padrão de codificação - Prettier
         run: npm run format:check
         
-      - name: Deprecated code
+      - name: Deprecated code + Code Smells
         run: npm run lint
       
       - name: Código duplicado
